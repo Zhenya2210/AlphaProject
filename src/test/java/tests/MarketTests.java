@@ -13,13 +13,13 @@ public class MarketTests extends BaseTest{
     @BeforeEach
     public void startYandex(){
         openYandex();
+        yandexMainPage.clickMarket();
+        marketMainMenuPage.clickElectronics();
     }
 
 
     @Test
     public void testMobileTelephone(){
-        yandexMainPage.clickMarket();
-        marketMainMenuPage.clickElectronics();
         electronicsPage.clickMobilePhone();
         mobilePhoneListPage.clickAllFilters();
         mobilePhoneFiltersPage.setPriceMin("20000");
@@ -41,8 +41,6 @@ public class MarketTests extends BaseTest{
 
     @Test
     public void testHeadphone(){
-        yandexMainPage.clickMarket();
-        marketMainMenuPage.clickElectronics();
         electronicsPage.clickHeadphone();
         headphoneListPage.clickAllFilters();
         headphoneFiltersPage.setPriceMin("5000");
@@ -63,8 +61,6 @@ public class MarketTests extends BaseTest{
 
     @Test
     public void testSortPrice(){
-        yandexMainPage.clickMarket();
-        marketMainMenuPage.clickElectronics();
         electronicsPage.clickMobilePhone();
         mobilePhoneListPage.clickSortByPrice();
         assertTrue(mobilePhoneListPage.checkThatSortByPriceCorrect());
