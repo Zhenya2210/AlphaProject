@@ -48,7 +48,6 @@ public class MarketTests extends BaseTest{
         headphoneFiltersPage.clickShowSuitable();
         int quantityHeadphone = headphoneListPage.getQuantityProducts();
         assertEquals(19, quantityHeadphone, "The number of headphone isn't equal to 19"); //не соответствует условию задания
-        System.out.println(quantityHeadphone);
         String nameFirstHeadphone = headphoneListPage.getNameProduct(1);
         marketSearchLine.enterValue(nameFirstHeadphone);
         marketSearchLine.clickFind();
